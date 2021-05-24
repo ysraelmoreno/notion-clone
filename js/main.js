@@ -65,9 +65,38 @@ function appendDiv(divTarget) {
                 }));
 
                 if(ev.key === "Enter") {
+                    let regex = /\/h[1-6]/gm;
+                    if(regex.test(ev.target.innerText)) {
+                        console.log(regex.test(ev.target.innerText))
+                        switch (ev.target.innerText) {
+                            case "/h1":
+                                div.className = "heading1"
+                                div.innerText =""
+                                break;
+                            case "/h2":
+                                div.className = "heading2"
+                                div.innerText =""
+                                break;
+                            case "/h3":
+                                div.className = "heading3"
+                                div.innerText =""
+                                break;
+                            case "/h4":
+                                div.className = "heading4"
+                                div.innerText =""
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
                     uploadLines(beforeDiv);
                     ev.preventDefault();
                 }
+
+
+
+
 
             })
             div.focus();
@@ -78,6 +107,13 @@ function appendDiv(divTarget) {
     }, 100)
 }
 
+
+titleInput.addEventListener('keydown', ev => {
+    if(ev.key === "Enter") {
+        ev.preventDefault();
+        subtitleInput.focus();
+    }
+})
 
 subtitleInput.addEventListener('keydown', ev => {
     if(ev.key === "Enter") {

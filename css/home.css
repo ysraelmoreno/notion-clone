@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(253, 253, 253);
 }
 #title-header {
   max-width: 1240px;
@@ -43,7 +43,8 @@ body {
 
 #subtitle:empty:before {
   content: attr(data-placeholder);
-  color: rgb(135, 135, 135);
+  color: rgb(181, 181, 181);
+  font-weight: 700;
 }
 
 .text-editable {
@@ -56,6 +57,81 @@ body {
   align-items: flex-start;
   align-self: center;
   justify-content: center;
+}
+
+.heading1 {
+  max-width: 1240px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.heading2 {
+  max-width: 1240px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.heading3 {
+  max-width: 1240px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.heading3 {
+  max-width: 1240px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.heading4 {
+  max-width: 1240px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .text-editable:focus {
