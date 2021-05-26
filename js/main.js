@@ -83,7 +83,9 @@ function appendDiv(divTarget) {
         }
       }
 
-      if (ev.key === "Enter") {
+      let regexTest = /[a-z]/gm;
+
+      if (regexTest.test(ev.key)) {
         let regex = /\/h[1-6]/gm;
         if (regex.test(ev.target.innerText)) {
           switch (ev.target.innerText) {
@@ -108,11 +110,12 @@ function appendDiv(divTarget) {
               break;
 
             default:
-              break;
           }
         }
-        uploadLines(ev.target.id);
-        ev.preventDefault();
+        if (ev.key === "Enter") {
+          uploadLines(ev.target.id);
+          ev.preventDefault();
+        }
       }
     });
 
