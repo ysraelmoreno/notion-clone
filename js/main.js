@@ -10,10 +10,6 @@ let text = [];
 function uploadLines(targetedDiv) {
   let lastText = texts[texts.length - 1];
 
-  if (lastText.innerText === "") {
-    return;
-  }
-
   text.push(lastText.innerText);
   appendDiv(targetedDiv);
 }
@@ -43,12 +39,6 @@ function appendDiv(divTarget) {
     editableDiv.push(div);
 
     div.addEventListener("keydown", (ev) => {
-      let divFocus = Array.from(texts).filter((element) => {
-        if (ev.target.id === element.id) {
-          return element;
-        }
-      });
-
       if (ev.key === " ") {
         let regex = /\/h[1-6]/gm;
         if (regex.test(ev.target.innerText)) {
